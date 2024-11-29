@@ -1,0 +1,272 @@
+.stages {
+  margin-top: 103px;
+  position: relative;
+}
+
+.stages__title {
+  margin: 0;
+  max-width: 806px;
+  max-height: 130px;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 64.8px;
+}
+
+.subtitle {
+  position: absolute;
+  max-width: 280px;
+  top: 72px;
+  left: 301px;
+  margin: 0;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(48, 87, 162, 1);
+}
+
+.split__one {
+  grid-area: split__one;
+}
+.split__two {
+  grid-area: split__two;
+}
+
+.cards {
+  margin-top: 54px;
+  min-width: 100%;
+  display: grid;
+  grid-template-rows: 112px 112px 136px;
+  grid-auto-flow: row;
+  grid-template-areas: 
+  "split__one split__one number__three"
+  "split__two split__two number__three"
+  "number__six number__seven number__seven";
+  gap: 20px;
+}
+
+.split {
+  display: flex;
+  gap: 20px;
+}
+
+.number__seven {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.number__seven .card-text {
+  max-width: 446px;
+}
+
+.stages__img {
+  position: absolute;
+  right: -5.3%;
+  bottom: -1%;
+  top: auto;
+  left: auto;
+}
+
+.card {
+  padding: 20px;
+  max-width: 100%;
+  min-width: 390px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: url(../../images/Cooper_Union.png) no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 16px;
+}
+
+.card-text {
+  font-family: "Golos Text";
+  max-width: 302px;
+  min-width: 301px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: rgba(49, 49, 49, 1);
+}
+
+.number {
+  margin: 0;
+  padding: 11px;
+  /* padding-bottom: 2px; */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+}
+
+.number h3 {
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(49, 49, 49, 1);
+}
+
+.number__three {
+  grid-row-start: span 2;
+  grid-area: number__three;
+}
+
+.arrows__contaner {
+  display: none;
+}
+
+.subtitle {
+  position: inherit;
+  max-width: 100%;
+  width: 100%;
+  text-align: start;
+  top: 0;
+  left: 0;
+  margin: 14px 0 148px;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.stages__title {
+  margin: 0;
+  max-width: 375px;
+  max-height: 120px;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 41px;
+  text-align: left;
+}
+
+.card__btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(49, 49, 49, 1);
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  color: white;
+  transition: 0.6s ease;
+  border: none;
+}
+.disabled {
+  background: rgba(214, 214, 214, 1);
+  cursor: default;
+}
+
+.indicatorsList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(49, 49, 49, 0.3);
+  /* box-shadow: 0 2px 1px rgba(0, 0, 0, 1); */
+}
+
+.indicator.active {
+  background-color: rgba(49, 49, 49, 1);
+}
+
+@media screen and (max-width: 1330px) {
+  .stages__img {
+    width: 335px;
+    height: 182px;
+    right: auto;
+    bottom: auto;
+    top: 195px;
+    left: 10px;
+  }
+
+  .stages__img img {
+    width: 100%;
+    rotate: -4deg;
+  }
+
+  .stages {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    display: flex;
+    margin-top: 54px;
+    min-width: 100%;
+    max-height: 300px;
+    justify-content: center;
+    gap: 0 20px;
+    overflow: hidden;
+  }
+  .split {
+    /* width: 335px; */
+    height: 330px;
+    box-sizing: border-box;
+  }
+  .split__one,
+  .split__two {
+    /* width: max-content; */
+    flex-direction: column;
+    height: 330px;
+    gap: 0;
+  }
+  
+  .number__seven {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-area: number__seven;
+  }
+  .number__six {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-area: number__six;
+  }
+  
+  .card {
+    max-width: 335px;
+    padding-top: 62px;
+    min-width: auto;
+  }
+  
+  .number__two,
+  .number__five {
+    padding-top: 0;
+  }
+  
+  .card-text {
+    max-width: 240px;
+    /* width: 240px; */
+    min-width: auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    letter-spacing: 0.6px;
+  }
+  .arrows__contaner {
+    margin: 28px auto 0;
+    width: 178px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}

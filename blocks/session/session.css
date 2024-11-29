@@ -1,0 +1,148 @@
+.session {
+  margin: 68px auto 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.session__title {
+  margin: 0;
+  margin-top: -3px;
+  /* width: 764px; */
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48.6px;
+}
+
+.session__title span {
+  font-weight: 700;
+  color: rgba(245, 73, 50, 1);
+  letter-spacing: 0.5px;
+}
+
+.session__contaner {
+  max-width: 704px;
+  display: flex;
+  flex-direction: column;
+}
+
+.session__img {
+  margin: -30px 18px 0 -25px;
+  min-width: 525px;
+  /* height: 527px; */
+}
+
+.session__img img {
+  width: 100%;
+  max-width: 530px;
+  z-index: 0;
+}
+
+.session__text {
+  margin: 0;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(48, 87, 162, 1);
+}
+
+td {
+  width: 305px;
+  padding: 15px;
+  padding-left: 0;
+  font-weight: 400;
+  color: rgba(49, 49, 49, 0.7);
+}
+
+th {
+  padding: 15px 16px;
+  font-weight: 600;
+  border-left: 2px solid rgba(208, 208, 208, 1);
+}
+
+th span {
+  /* border: 2px solid rgba(245, 73, 50, 1); */
+  margin-right: 12px;
+  text-decoration: line-through;
+  text-decoration-color: rgba(245, 73, 50, 1);
+}
+
+tr {
+  /* padding: 15px; */
+  font-family: "Golos Text";
+  font-size: 20px;
+  line-height: 24px;
+  border-collapse: collapse;
+  border-bottom: 2px solid rgba(208, 208, 208, 1);
+  text-align: left;
+}
+
+table {
+  margin: 60px 0 48px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* border: 2px solid rgba(255, 255, 255, 1); */
+}
+
+@media screen and (max-width: 1024px) {
+  .session {
+    flex-direction: column;
+  }
+  .session__title {
+    margin-top: -40px;
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .session__title span {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.03px;
+  }
+  .session__img {
+    margin: -34px auto auto -20px;
+    min-width: 375px;
+    width: 100%;
+    /* height: 402px; */
+  }
+  td {
+    padding: 0;
+    padding-top: 15px;
+    width: max-content;
+  }
+  tr {
+    /* padding: 15px; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  th {
+    padding: 0;
+    padding-bottom: 15px;
+    border-left: none;
+  }
+
+  th span {
+    margin-right: 12px;
+  }
+  table {
+    margin: 44px auto 40px;
+    width: 100%;
+  }
+
+  .payment {
+    flex-direction: row;
+  }
+  .payment td,
+  .payment th {
+    padding: 15px 0;
+  }
+  .session__text {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}

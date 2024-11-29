@@ -1,0 +1,16 @@
+.content {
+  margin: 0 auto;
+  padding: 0 72px;
+  width: 100%;
+  max-width: 1366px;
+  overflow: hidden;
+  /* box-sizing: border-box; */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 0 20px;
+  }
+}
