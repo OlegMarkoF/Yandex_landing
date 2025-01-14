@@ -96,7 +96,7 @@
 .slide {
   max-width: 462px;
   flex: 0 0 33.333%;
-  opacity: .8;
+  opacity: 0.8;
   transition: all 0.3s ease;
 }
 .active {
@@ -201,7 +201,6 @@ button:disabled {
     margin: 120px auto 180px;
     max-width: 100%;
     position: relative;
-
   }
   .participant {
     width: 335px;
@@ -220,7 +219,6 @@ button:disabled {
   }
 }
 @media screen and (max-width: 1024px) {
-
   .slideshow-container__arrows {
     max-width: 129px;
     position: absolute;
@@ -232,11 +230,9 @@ button:disabled {
     width: 320px;
     height: 320px;
   }
-
 }
 
 @media screen and (max-width: 463px) {
-
   .slideshow-container__arrows {
     max-width: 129px;
     position: absolute;
@@ -248,5 +244,4 @@ button:disabled {
     width: 244px;
     height: 244px;
   }
-
 }
