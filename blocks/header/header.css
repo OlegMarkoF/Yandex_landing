@@ -1,11 +1,24 @@
 .header {
-  margin: 0 auto;
+  margin: 0 auto ;
   width: 100%;
-  background: url("../../images/bg_content.jfif") 0% 0% / cover no-repeat;
   /* height: 700px; */
   color: rgba(49, 49, 49, 1);
   /* overflow: hidden; */
   box-sizing: border-box;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  top: 0;
+  left: 0;
+  background: url("../../images/bg_content.jfif") 0% 0% / cover no-repeat;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+  z-index: 1;
 }
 
 .header_box {
@@ -26,17 +39,29 @@
 
 .city {
   position: absolute;
-  /* left: 0; */
-  /* right: 0; */
+  /* left: -102px; */
+  right: -156px;
   align-self: center;
-  bottom: 0;
-  z-index: 2;
+  bottom: -7px;
+  z-index: 1;
 }
 
 .header_img {
+  position: relative;
+  /* width: 100%; */
   display: block;
   bottom: 0;
   right: 14px;
+  top: -10px;
+  z-index: 0;
+}
+
+.header_border_img {
+  position: absolute;
+  width: 100%;
+  top: -23px;
+  right: 35px;
+  box-sizing: border-box;
 }
 
 .circle__wrapper {
@@ -71,6 +96,7 @@
   margin-left: 72px;
   padding-top: 26px;
   width: 245px;
+  z-index: 2;
 }
 
 .header-content {
@@ -178,12 +204,12 @@
 .ferz {
   bottom: 23.6%;
   left: 53.5%;
-  z-index: 1;
+  z-index: 0;
 }
 .king {
   bottom: 38.5%;
   right: 11.5%;
-  z-index: 1;
+  z-index: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -192,6 +218,11 @@
     height: 770px;
     /* flex-direction: column; */
   }
+
+  .header::after {
+    max-height: 770px;
+  }
+
   .header_bg {
     padding: 0 20px;
     height: 770px;
@@ -205,6 +236,10 @@
     display: block;
     /* height: 253px; */
     right: -50%;
+  }
+  .header_border_img {
+    top: -18px;
+    right: 26px;
   }
   .circle__wrapper{
     width: 350px;
@@ -278,8 +313,15 @@
   }
   .header_img {
     object-fit: cover;
-    height: 263px;
+    height: 230px;
+    right: 45px;
+    top: -8px;
   }
+  .header_border_img {
+    right: 55px;
+    top: -15px;
+  }
+
   .horse {
     width: 96px;
     left: 38%;

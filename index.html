@@ -38,6 +38,7 @@
           </div>
           <div class="city">
             <img class="header_img" src="./images/city.png" alt="город" />
+            <img class="header_border_img" src="./images/border.png" alt="рамка" />
           </div>
           <img
             class="chess pawn"
@@ -63,7 +64,7 @@
         </div>
       </div>
     </header>
-    <section class="marquee">
+    <section class="marquee marquee__header">
       <div class="marquee-text text_one">
         • Шахматы двигают вперёд не только культуру, но и экономику! • Лед
         тронулся, господа присяжные заседатели! • Дело помощи утопающим — дело
@@ -142,76 +143,43 @@
         <article class="stages">
           <h2 class="title stages__title">Этапы преображения Васюков</h2>
           <p class="subtitle">Будущие источники обогащения васюкинцев</p>
-          <div class="cards">
-            <div class="split split__one">
-              <div class="card number__one">
-                <div class="number">
-                  <h3>1</h3>
-                </div>
-                <p class="card-text">
-                  Строительство железнодорожной магистрали Москва-Васюки
-                </p>
+          
+          <ul class="stages__list">
+            <li class="stages__item stages__item_wide">
+              <div class="stages__text" data-number="1">
+                Строительство железнодорожной магистрали Москва-Васюки
               </div>
-              <div class="card number__two">
-                <div class="number">
-                  <h3>2</h3>
-                </div>
-                <p class="card-text">
-                  Открытие фешенебельной гостиницы «Проходная пешка» и других
-                  небоскрёбов
-                </p>
+              <div class="stages__text" data-number="2">
+                Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
               </div>
-            </div>
+            </li>
+            <li class="stages__item stages__item_long">
+              <div class="stages__text" data-number="3">
+                Поднятие сельского хозяйства в радиусе на&nbsp;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
+              </div>
+            </li>
+            <li class="stages__item stages__item_wide">
+              <div class="stages__text" data-number="4">
+                Строительство дворца для&nbsp;турнира
+              </div>
+              <div class="stages__text" data-number="5">
+                Размещение гаражей для&nbsp;гостевого автотранспорта
+              </div>
+            </li>
+            <li class="stages__item">
+              <div class="stages__text" data-number="6">
+                Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+              </div>
+            </li>
+            <li class="stages__item stages__item_with-img">
+              <div class="stages__text" data-number="7">
+                Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+              </div>
+            </li>
+          </ul>
 
-            <div class="card number__three split">
-              <div class="number">
-                <h3>3</h3>
-              </div>
-              <p class="card-text">
-                Поднятие сельского хозяйства в радиусе
-                на&nbsp;тысячу&nbsp;километров: производство овощей, фруктов,
-                икры, шоколадных конфет
-              </p>
-            </div>
-
-            <div class="split split__two">
-              <div class="card number__four">
-                <div class="number">
-                  <h3>4</h3>
-                </div>
-                <p class="card-text">Строительство дворца для&nbsp;турнира</p>
-              </div>
-              <div class="card number__five">
-                <div class="number">
-                  <h3>5</h3>
-                </div>
-                <p class="card-text">
-                  Размещение гаражей для&nbsp;гостевого автотранспорта
-                </p>
-              </div>
-            </div>
-            <div class="card number__six split">
-              <div class="number">
-                <h3>6</h3>
-              </div>
-              <p class="card-text">
-                Постройка сверхмощной радиостанции для передачи всему миру
-                сенсационных результатов
-              </p>
-            </div>
-            <div class="card number__seven split">
-              <div class="number">
-                <h3>7</h3>
-              </div>
-              <p class="card-text">
-                Создание аэропорта «Большие Васюки» с&nbsp;регулярным
-                отправлением почтовых самолётов и дирижаблей во все концы света,
-                включая Лос-Анжелос и Мельбурн
-              </p>
-            </div>
-          </div>
           <div class="arrows__contaner">
-            <button class="card__btn next-card__btn">
+            <button class="card__btn next-card__btn" disabled>
               <img class="arrow_prev" src="./images/prev.svg" />
             </button>
             <!-- <div class="card-count"></div> -->
@@ -226,9 +194,7 @@
               <img class="arrow_next" src="./images/next.svg" />
             </button>
           </div>
-          <div class="stages__img">
-            <img src="./images/plane.png" alt="самолет" />
-          </div>
+
         </article>
 
         <article class="participants">
@@ -247,37 +213,37 @@
           <div class="slider">
             <div class="participant slide">
               <img src="./images/member.png" />
-              <h3 class="member-name">Хозе-Рауль Капабланка</h3>
+              <h3 class="member-name">Хозе-Рауль&nbsp;Капабланка</h3>
               <p class="member-description">Чемпион мира по шахматам</p>
               <button class="details-button">Подробнее</button>
             </div>
             <div class="participant slide active">
               <img src="./images/member.png" />
-              <h3 class="member-name">Эммануил Ласкер</h3>
+              <h3 class="member-name">Эммануил&nbsp;Ласкер</h3>
               <p class="member-description">Чемпион мира по шахматам</p>
               <button class="details-button">Подробнее</button>
             </div>
             <div class="participant slide">
               <img src="./images/member.png" />
-              <h3 class="member-name">Александр Алехин</h3>
+              <h3 class="member-name">Александр&nbsp;Алехин</h3>
               <p class="member-description">Чемпион мира по шахматам</p>
               <button class="details-button">Подробнее</button>
             </div>
             <div class="participant slide">
               <img src="./images/member.png" />
-              <h3 class="member-name">Арон Нимцович</h3>
+              <h3 class="member-name">Арон&nbsp;Нимцович</h3>
               <p class="member-description">Чемпион мира по шахматам</p>
               <button class="details-button">Подробнее</button>
             </div>
             <div class="participant slide">
               <img src="./images/member.png" />
-              <h3 class="member-name">Рихард Рети</h3>
+              <h3 class="member-name">Рихард&nbsp;Рети</h3>
               <p class="member-description">Чемпион мира по шахматам</p>
               <button class="details-button">Подробнее</button>
             </div>
             <div class="participant slide">
               <img src="./images/member.png" />
-              <h3 class="member-name">Остап Бендер</h3>
+              <h3 class="member-name">Остап&nbsp;Бендер</h3>
               <p class="member-description">Гроссмейстер</p>
               <button class="details-button">Подробнее</button>
             </div>

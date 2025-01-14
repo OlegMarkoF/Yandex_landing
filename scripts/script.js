@@ -1,12 +1,14 @@
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
-const cards = document.querySelectorAll(".split");
+const cards = document.querySelectorAll(".stages__item");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const nextCardBtn = document.querySelector(".next-card__btn");
 const prevCardBtn = document.querySelector(".prev-card__btn");
 const participantCount = document.querySelector(".participant-count");
 const active = document.querySelector(".active");
+const stagesContainer = document.querySelector('.stages__list');
+const stagesStepsList = document.querySelectorAll('.stages-buttons__step');
 
 const indicators = Array.from(document.querySelectorAll(".indicator"));
 let currentSlide = 0;
@@ -20,7 +22,7 @@ let timer = setInterval(function () {
   showSlide();
 }, 4000);
 
-showCardsSlides(currentCard);
+// showCardsSlides(currentCard);
 
 function showSlide() {
   slides.forEach((slide, index) => {
@@ -79,18 +81,22 @@ function updateButtons() {
 
 function showCardsSlides() {
   cards.forEach((slide, index) => {
-    if (window.innerWidth < 1330) {
+    if (window.innerWidth < 410) {
       if (index === currentCard - 1) {
         slide.style.display = "flex";
       } else {
         slide.style.display = "none";
       }
-    } else {
+    } else if (window.innerWidth < 1100) {
       slide.style.display = "flex";
+    }
+    else {
+      slide.style.display = "grid";
     }
   });
   activateIndicator(currentCard - 1);
 }
+
 function nextCard() {
   currentCard++;
   if (currentCard > cards.length) {
@@ -114,16 +120,16 @@ prevCardBtn.addEventListener("click", () => {
   if (currentCard > cards.length) {
     currentCard = 1; // Переход к первому слайду после последнего
   }
-  // updateButtons();
-  showCardsSlides()
+  updateButtons();
+  showCardsSlides();
 });
 nextCardBtn.addEventListener("click", () => {
   currentCard--;
   if (currentCard < 1) {
     currentCard = cards.length; // Переход к последнему слайду перед первым
   }
-  // updateButtons();
-  showCardsSlides()
+  updateButtons();
+  showCardsSlides();
 });
 
 prevBtn.addEventListener("click", () => {

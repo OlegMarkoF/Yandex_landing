@@ -20,7 +20,7 @@
 .session__title span {
   font-weight: 700;
   color: rgba(245, 73, 50, 1);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05px;
 }
 
 .session__contaner {
@@ -36,6 +36,7 @@
 }
 
 .session__img img {
+  margin-top: -20px;
   width: 100%;
   max-width: 530px;
   z-index: 0;
@@ -93,7 +94,7 @@ table {
     flex-direction: column;
   }
   .session__title {
-    margin-top: -40px;
+    margin-top: 0;
     max-width: 100%;
     font-size: 28px;
     line-height: 38px;
@@ -109,6 +110,11 @@ table {
     width: 100%;
     /* height: 402px; */
   }
+
+  .session__img img {
+    margin-top: -10px;
+  }
+
   td {
     padding: 0;
     padding-top: 15px;
@@ -130,7 +136,7 @@ table {
     margin-right: 12px;
   }
   table {
-    margin: 44px auto 40px;
+    margin: 44px auto 43px;
     width: 100%;
   }
 

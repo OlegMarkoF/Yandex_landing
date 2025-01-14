@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
 }
 
 button {
@@ -26,8 +27,12 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-  .page {
-    min-width: 335px;
+  body,
+  .page,
+  .header,
+  .header::after,
+  .marquee  {
+    min-width: 375px;
   }
 
 }

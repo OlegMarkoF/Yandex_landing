@@ -5,6 +5,7 @@
   max-width: 1366px;
   overflow: hidden;
   /* box-sizing: border-box; */
+  z-index: 3;
 }
 
 
